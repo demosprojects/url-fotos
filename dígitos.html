@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Extraer últimos 7 dígitos</title>
+</head>
+<body>
+
+  <h2>Extraer últimos 7 dígitos</h2>
+
+  <input type="text" id="codigo" placeholder="Ej: 8CMML11B2S2065316">
+  <button onclick="extraer()">Extraer</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    function extraer() {
+      let codigo = document.getElementById("codigo").value;
+
+      // Tomar los últimos 7 caracteres
+      let ultimos7 = codigo.slice(-7);
+
+      document.getElementById("resultado").innerText = "Últimos 7 dígitos: " + ultimos7;
+    }
+  </script>
+
+</body>
+</html>
